@@ -6,27 +6,39 @@
                     <h3>Sign Up</h3>
                 </mat-card-title>
                 <mat-card-content fxLayout="column">
-                    <form novalidate [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+                    <form novalidate [formGroup]="signUpForm" #sform="ngForm" (ngSubmit)="onSubmit()">
                         <p>
                             <mat-form-field class="half-width">
                                 <mat-label>First Name :</mat-label>
                                 <input matInput formControlName="firstname" type="text" placeholder="First Name">
+                                <mat-error *ngIf="signUpForm.get('firstname').hasError('required') && signUpForm.get('firstname').touched">
+                                    First Name is required
+                                </mat-error>
                             </mat-form-field>
                             <mat-form-field class="half-width">
                                 <mat-label>Last Name :</mat-label>
                                 <input matInput formControlName="lastname" type="text" placeholder="Last Name">
+                                <mat-error *ngIf="signUpForm.get('lastname').hasError('required') && signUpForm.get('lastname').touched">
+                                    Last Name is required
+                                </mat-error>
                             </mat-form-field>
                         </p>
                         <p>
                             <mat-form-field  class="full-width">
                                 <mat-label>Email</mat-label>
                                 <input matInput formControlName="email" type="email" placeholder="Email">
+                                <mat-error *ngIf="signUpForm.get('email').hasError('required') && signUpForm.get('email').touched">
+                                    Email is required
+                                </mat-error>
                             </mat-form-field>
                         </p>
                         <p>
                             <mat-form-field  class="full-width">
                                 <mat-label>Password</mat-label>
                                 <input matInput formControlName="password" type="password" placeholder="Password">
+                                <mat-error *ngIf="signUpForm.get('password').hasError('required') && signUpForm.get('password').touched">
+                                    Password is required
+                                </mat-error>
                             </mat-form-field>
                         </p>
                         <button [disabled]="signUpForm.invalid" type="submit" mat-raised-button color="primary"> Submit </button>
