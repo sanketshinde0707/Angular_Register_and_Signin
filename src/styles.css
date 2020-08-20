@@ -1,8 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 body{
     padding: 0;
     margin: 0;
     font-family: Roboto,sans-serif;
 }
+
+.flex-spacer {
+    flex: 1 1 auto;
+}
+
+.nav-icon {
+    margin: 0 15px;
+  }
