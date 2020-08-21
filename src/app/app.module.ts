@@ -15,12 +15,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
+import { SigninComponent } from './signin/signin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

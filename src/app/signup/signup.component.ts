@@ -30,6 +30,7 @@ export class SignupComponent implements OnInit {
       lastname: ['',Validators.required],
       email: ['',Validators.required],
       password: ['',Validators.required],
+      
     });
   }
 
