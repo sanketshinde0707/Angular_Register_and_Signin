@@ -38,7 +38,7 @@ export class SignupComponent implements OnInit {
     this.signUp = this.signUpForm.value ;/*This gives a javascript object */
     /*Here i am mapping the form model and data model ,and since both of them are of the same type we can directly map them */
     this.signupservice.signUp(this.signUp);
-    let snackBarRef = this.snackbar.open('Sign up succesfull !', 'Close');
+    let snackBarRef = this.snackbar.open('Sign up succesfull !', 'Close',{duration: 5000});
     console.log(this.signUp);
     this.signUpForm.reset();
     this.signUpFormDirective.resetForm();

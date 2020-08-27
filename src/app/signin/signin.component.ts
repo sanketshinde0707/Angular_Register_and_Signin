@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Form } from '@angular/forms';
 import { SignupService }from '../services/signup.service';
 import { Signin } from '../shared/signin';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-signin',
@@ -14,7 +15,8 @@ export class SigninComponent implements OnInit {
   signIn: Signin ;
 
   constructor(private signupseervice: SignupService,
-    private fb: FormBuilder) { }
+    private fb: FormBuilder,
+    private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.createSignIn()
@@ -32,10 +34,13 @@ export class SigninComponent implements OnInit {
     this.signIn = this.signInForm.value;
     let signInCheck = this.signupseervice.checkAccount(this.signIn);
    if( signInCheck.check == 0) {
-    console.log("Account Verified");
+     this.snackbar.open('Account Verified' , 'Close',{duration: 5000});
+      console.log("Account Verified");
    } else if ( signInCheck.check == 1 ){
+    this.snackbar.open('Password Incorrect !!! Check your password again' , 'Close',{duration: 5000});
      console.log("Password Incorrect");
    } else if ( signInCheck.check = 2) {
+    this.snackbar.open('Sorry !! Account doesnt exist' , 'Close',{duration: 5000});
      console.log("Account doesnt exist");
    }
   }
