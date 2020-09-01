@@ -1,6 +1,8 @@
-# FormValidation
+# Angular_Register_and_Signin
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+This is a beginner level project for beginners who are wanting to make a angular project. This project leverages the angular concepts of Angular Router ,angular services ,components and reactive forms and form validation.Also Angular Material concepts like cards and toolbars etc are used for designing the UI of the whole project.
+You can see the live demo at https://stackblitz.com/github/sanketshinde0707/Angular_Register_and_Signin
 
 ## Development server
 
