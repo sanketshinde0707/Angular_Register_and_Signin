@@ -10,13 +10,13 @@
                         <p>
                             <mat-form-field class="full-width">
                                 <mat-label>Email :</mat-label>
-                                <input matInput formControlName="email" type="email" placeholder=" Email ">
+                                <input matInput formControlName="email" type="email" placeholder=" Email" cdkTextareaAutosize>
                             </mat-form-field>
                         </p>
                         <p>
                             <mat-form-field class="full-width">
                                 <mat-label>Password :</mat-label>
-                                <input matInput formControlName="password" type="password" placeholder=" Password ">
+                                <input matInput formControlName="password" type="password" placeholder=" Password" cdkTextareaAutosize>
                             </mat-form-field>
                         </p>
                         <button [disabled]="signInForm.invalid" type="submit" mat-raised-button  color="primary"> Submit </button>

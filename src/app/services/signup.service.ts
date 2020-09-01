@@ -9,7 +9,7 @@ import { Signin } from '../shared/signin';
 
 export class SignupService {
 
-  SIGNUP: Signup[] =[];
+  SIGNUP: Signup[] =[{firstname: "Sanket", lastname: "Shinde", email: "abc@def.gh", password: "Waah", check: null }];
   result: string; 
 
   constructor() { }
